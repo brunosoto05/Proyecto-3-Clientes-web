@@ -1,0 +1,98 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f9f4;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #81c784;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+main {
+  padding: 1rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+h2 {
+  color: #388e3c;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+form input,
+form select,
+form button {
+  padding: 0.5rem;
+  flex: 1;
+  min-width: 120px;
+}
+
+button {
+  background-color: #66bb6a;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #4caf50;
+}
+
+#transaction-list {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  background-color: white;
+}
+
+.transaction {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.3rem;
+}
+
+.comparison-section table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  background-color: white;
+}
+
+.comparison-section th,
+.comparison-section td {
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.suggestions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 5px;
+}
+
+.suggestions span {
+  background-color: #e0f2f1;
+  color: #00695c;
+  padding: 4px 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.suggestions span:hover {
+  background-color: #b2dfdb;
+}

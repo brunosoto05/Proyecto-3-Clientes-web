@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Finanzas Personales</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+  <header>
+    <h1> Finanzas Personales</h1>
+  </header>
+
+  <main>
+    <section class="form-section">
+      <h2>Registrar Transacción</h2>
+      <form id="transaction-form">
+        <select id="type" required>
+          <option value="">Tipo</option>
+          <option value="ingreso">Ingreso</option>
+          <option value="egreso">Egreso</option>
+        </select>
+        <input type="number" id="amount" placeholder="Monto" required />
+        <input type="date" id="date" required />
+        <input type="text" id="category" placeholder="Categoría" required />
+        <div id="category-suggestions" class="suggestions"></div>
+        <button type="submit">Agregar</button>
+      </form>
+    </section>
+
+    <section class="form-section">
+      <h2>Registrar Gasto Estimado</h2>
+      <form id="estimate-form">
+        <input type="month" id="estimate-month" required />
+        <input type="text" id="estimate-category" placeholder="Categoría" required />
+        <input type="number" id="estimate-amount" placeholder="Monto estimado" required />
+        <button type="submit">Agregar</button>
+      </form>
+    </section>
+
+    <section class="filters">
+      <h2>Filtros</h2>
+      <select id="filter-type">
+        <option value="todos">Todos</option>
+        <option value="ingreso">Ingresos</option>
+        <option value="egreso">Egresos</option>
+      </select>
+      <input type="text" id="filter-category" placeholder="Categoría" />
+      <button type="button" id="apply-filters">Filtrar</button>
+    </section>
+
+    <section class="list-section">
+      <h2>Transacciones</h2>
+      <div id="transaction-list"></div>
+    </section>
+
+    <section class="comparison-section">
+      <h2>Comparación Estimado vs Real</h2>
+      <table id="comparison-table">
+        <thead>
+          <tr>
+            <th>Mes</th>
+            <th>Categoría</th>
+            <th>Estimado</th>
+            <th>Real</th>
+            <th>Diferencia</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="db.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
